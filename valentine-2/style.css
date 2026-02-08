@@ -1,0 +1,197 @@
+/* ==========================================
+   RESET (removes default browser spacing)
+   ========================================== */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+
+  /* 💡 CUSTOMIZE HERE: Change global font */
+  font-family: "Poppins", sans-serif;
+}
+
+/* ==========================================
+   BODY / BACKGROUND
+   ========================================== */
+body {
+  height: 100vh;
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  /* 💡 CUSTOMIZE HERE: Main pastel background color */
+  background: #ffe5ec;
+
+  overflow: hidden; /* prevents scrollbars */
+}
+
+/* ==========================================
+   PAGE MANAGEMENT (JS controls visibility)
+   ========================================== */
+.page {
+  display: none; /* hidden by default */
+  width: 100%;
+  height: 100%;
+
+  justify-content: center;
+  align-items: center;
+}
+
+/* This class is added by JS to show page */
+.page.active {
+  display: flex;
+}
+
+/* ==========================================
+   CARD (Main white container box)
+   ========================================== */
+.card {
+  /* 💡 CUSTOMIZE HERE: Card background */
+  background: white;
+
+  padding: 40px;
+  border-radius: 20px;
+
+  text-align: center;
+  width: 90%;
+  max-width: 420px;
+
+  /* 💡 CUSTOMIZE HERE: Main text color */
+  color: #740001;
+
+  /* soft shadow */
+  box-shadow: 0 10px 30px rgba(255, 105, 135, 0.3);
+}
+
+/* ==========================================
+   TEXT STYLING
+   ========================================== */
+
+/* Main question heading */
+.question {
+  margin-bottom: 30px;
+
+  /* 💡 CUSTOMIZE HERE: Question font size */
+  font-size: 24px;
+}
+
+/* Dynamic quotes/messages shown by JS */
+.quote {
+  margin-top: 18px;
+  font-size: 14px;
+  min-height: 20px;
+
+  /* 💡 CUSTOMIZE HERE: Quote text color */
+  color: #740001;
+}
+
+/* Small message on celebration page */
+.subtext {
+  color: #555;
+  margin-top: 10px;
+  margin-bottom: 20px;
+}
+
+/* ==========================================
+   BUTTONS LAYOUT
+   ========================================== */
+.buttons {
+  display: flex;
+  gap: 15px;
+  justify-content: center;
+}
+
+/* Base button style */
+button {
+  border: none;
+  padding: 12px 28px;
+  border-radius: 12px;
+
+  font-size: 16px;
+  cursor: pointer;
+
+  transition: 0.25s; /* smooth animation */
+}
+
+/* Hover effect */
+button:hover {
+  transform: scale(1.05);
+}
+
+/* ==========================================
+   YES BUTTON
+   ========================================== */
+.yes {
+  /* 💡 CUSTOMIZE HERE: Yes button color */
+  background: #ff758f;
+
+  color: white;
+  font-weight: bold;
+}
+
+/* ==========================================
+   NO BUTTON
+   ========================================== */
+.no {
+  /* 💡 CUSTOMIZE HERE: No button color */
+  background: #f8edeb;
+
+  color: #740001;
+  font-weight: bold;
+}
+
+/* If JS adds running class (moving button) */
+.no.running {
+  position: absolute;
+}
+
+/* ==========================================
+   CELEBRATION CARD (second page)
+   ========================================== */
+.celebration {
+  /* white background helps GIF look clean */
+  background: white;
+
+  /* 💡 CUSTOMIZE HERE: Border color */
+  border: 2px solid #ff758f;
+
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+
+  padding: 30px;
+}
+
+/* Celebration heading color */
+.celebration h1 {
+  color: #740001;
+}
+
+/* ==========================================
+   TENOR GIF STYLING
+   ========================================== */
+.tenor-gif-embed {
+  margin-top: 10px;
+
+  /* 💡 CUSTOMIZE HERE: GIF size control */
+  /* Example: width: 70% or 90% */
+  border-radius: 10px;
+
+  overflow: hidden;
+}
+
+/* ==========================================
+   FOOTER
+   ========================================== */
+footer {
+  position: absolute;
+  bottom: 10px;
+
+  font-size: 12px;
+
+  /* 💡 CUSTOMIZE HERE: Footer text color */
+  color: #740001;
+
+  opacity: 0.8;
+}

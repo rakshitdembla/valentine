@@ -1,0 +1,144 @@
+/* ==========================================
+   General Styles
+   ========================================== */
+body {
+  margin: 0;
+  padding: 0;
+  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+
+  /* 💡 CUSTOMIZE HERE: Change the overall background color */
+  background-color: #ffe6e6;
+
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+  overflow: hidden; /* Prevents scrollbars from appearing when the 'No' button moves */
+}
+
+/* ==========================================
+   Page Management
+   ========================================== */
+.page {
+  display: none; /* Hide all pages by default */
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  flex-grow: 1;
+  padding: 20px;
+  position: relative;
+}
+
+/* This class will be added to a page by JS to show it */
+.page.active {
+  display: flex;
+}
+
+/* ==========================================
+   Containers (The white boxes)
+   ========================================== */
+.container {
+  /* 💡 CUSTOMIZE HERE: Change the container background color or transparency */
+  background: rgba(255, 255, 255, 0.9);
+  padding: 30px;
+  border-radius: 20px;
+  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
+  position: relative;
+  width: 350px;
+  min-height: 350px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  box-sizing: border-box;
+}
+
+/* Slightly larger container for the second page */
+.celebration-container {
+  width: 400px;
+  min-height: 450px;
+}
+
+/* ==========================================
+   Text & Buttons
+   ========================================== */
+h1 {
+  /* 💡 CUSTOMIZE HERE: Change the main text color */
+  color: #d63031;
+  font-size: 2.2rem;
+  margin-bottom: 20px;
+}
+
+.subtext {
+  font-size: 1.2rem;
+  color: #555;
+  margin-bottom: 20px;
+}
+
+.buttons {
+  display: flex;
+  justify-content: center;
+  gap: 20px;
+  width: 100%;
+  position: relative;
+  height: 60px;
+}
+
+button {
+  font-size: 1.2rem;
+  padding: 15px 30px;
+  border: none;
+  border-radius: 50px;
+  cursor: pointer;
+  transition: all 0.2s ease; /* Makes the button look smooth when moving */
+}
+
+#yesBtn {
+  /* 💡 CUSTOMIZE HERE: Change the 'Yes' button color */
+  background-color: #27ae60;
+  color: white;
+}
+
+#noBtn {
+  /* 💡 CUSTOMIZE HERE: Change the 'No' button color */
+  background-color: #d63031;
+  color: white;
+  position: relative; /* Normal position at start */
+}
+
+/* This class is added by JS to make the 'No' button run away */
+#noBtn.running {
+  position: absolute;
+}
+
+#no-message {
+  color: #d63031;
+  font-weight: bold;
+  margin-top: 20px;
+  font-size: 1.1rem;
+  height: 30px;
+}
+
+/* ==========================================
+   GIF & Footer
+   ========================================== */
+/* GIF Styling */
+.tenor-gif-embed {
+  margin-top: 10px;
+  /* 💡 CUSTOMIZE HERE: Change GIF size (e.g., 50% for smaller, 80% for larger) */
+  width: 60% !important;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+footer {
+  text-align: center;
+  padding: 15px;
+  /* 💡 CUSTOMIZE HERE: Change the footer color */
+  background-color: #d63031;
+  color: white;
+  width: 100%;
+  position: fixed;
+  bottom: 0;
+  z-index: 10;
+}

@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <!-- ============================= -->
+    <!-- BASIC PAGE SETUP -->
+    <!-- ============================= -->
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <!-- ============================= -->
+    <!-- 💖 CHANGE PAGE TITLE HERE -->
+    <!-- This shows in browser tab -->
+    <!-- ============================= -->
+    <title>Be Mine ❤️</title>
+
+    <!-- External CSS file -->
+    <!-- All styling is controlled from style.css -->
+    <link rel="stylesheet" href="style.css" />
+
+    <!-- Lottie library for confetti/celebration animations -->
+    <script src="https://unpkg.com/@lottiefiles/lottie-player@latest/dist/lottie-player.js"></script>
+  </head>
+
+  <body>
+    <!-- ===================================================== -->
+    <!-- PAGE 1 → QUESTION SCREEN (visible first using .active) -->
+    <!-- ===================================================== -->
+    <div id="question-page" class="page active">
+      <div class="card">
+        <!-- ===================================== -->
+        <!-- 💖 CHANGE MAIN QUESTION TEXT HERE -->
+        <!-- Put your crush/partner name -->
+        <!-- ===================================== -->
+        <h1 class="question">Hey Siri, will you be my Valentine? 🌸</h1>
+
+        <!-- Buttons section -->
+        <div class="buttons">
+          <!-- YES button (JS listens to this id) -->
+          <button id="yesBtn" class="yes">Yes 💖</button>
+
+          <!-- NO button (moves/shows funny messages via JS) -->
+          <button id="noBtn" class="no">No 😅</button>
+        </div>
+
+        <!-- ===================================== -->
+        <!-- Funny/sad messages appear here via JS -->
+        <!-- DO NOT DELETE (script uses this id) -->
+        <!-- ===================================== -->
+        <p id="quote" class="quote"></p>
+      </div>
+    </div>
+
+    <!-- ===================================================== -->
+    <!-- PAGE 2 → CELEBRATION SCREEN (hidden initially) -->
+    <!-- Appears after clicking YES -->
+    <!-- ===================================================== -->
+    <div id="celebration-page" class="page">
+      <!-- ===================================== -->
+      <!-- 🎉 LOTTIE ANIMATION FILE -->
+      <!-- Replace congratulation.json to change animation -->
+      <!-- ===================================== -->
+      <lottie-player
+        src="congratulation.json"
+        background="transparent"
+        speed="1"
+        style="
+          position: absolute;
+          width: 100%;
+          height: 100%;
+          top: 0;
+          left: 0;
+          pointer-events: none;
+        "
+        loop
+        autoplay
+      >
+      </lottie-player>
+
+      <div class="card celebration">
+        <!-- ===================================== -->
+        <!-- 💖 CHANGE CELEBRATION HEADING -->
+        <!-- ===================================== -->
+        <h1>She said YES!! 🥰</h1>
+
+        <!-- ===================================== -->
+        <!-- 💖 CHANGE LOVE MESSAGE -->
+        <!-- Add your personal message -->
+        <!-- ===================================== -->
+        <p class="subtext">
+          Best day ever. You just unlocked infinite happiness 💫
+        </p>
+
+        <!-- ===================================== -->
+        <!-- 🎁 GIF SECTION -->
+        <!-- Replace Tenor link or postid for new GIF -->
+        <!-- ===================================== -->
+        <div
+          class="tenor-gif-embed"
+          data-postid="16448885156657771260"
+          data-share-method="host"
+          data-aspect-ratio="1"
+          data-width="100%"
+        >
+          <a href="https://tenor.com/"> Cute celebration gif </a>
+        </div>
+
+        <!-- Required script for Tenor GIFs -->
+        <script
+          type="text/javascript"
+          async
+          src="https://tenor.com/embed.js"
+        ></script>
+      </div>
+    </div>
+
+    <!-- ===================================================== -->
+    <!-- FOOTER -->
+    <!-- ===================================================== -->
+    <!-- CHANGE YOUR NAME HERE -->
+    <footer>Made by YOUR_NAME with ❤️</footer>
+
+    <!-- ===================================================== -->
+    <!-- JavaScript file -->
+    <!-- Handles button clicks & page switching -->
+    <!-- DO NOT REMOVE unless you modify logic -->
+    <!-- ===================================================== -->
+    <script src="script.js"></script>
+  </body>
+</html>
